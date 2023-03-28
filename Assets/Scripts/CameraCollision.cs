@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraCollision : MonoBehaviour
 {
@@ -15,8 +16,8 @@ public class CameraCollision : MonoBehaviour
             rend = obj.GetComponent<Renderer>();
             rend.enabled = false;
         } else if(collisionInfo.collider.tag == "Obstacle") {
-            Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false; // https://gamedevbeginner.com/how-to-quit-the-game-in-unity/
+            SceneManager.LoadScene("Camera");
+            // UnityEditor.EditorApplication.isPlaying = false; // https://gamedevbeginner.com/how-to-quit-the-game-in-unity/
         }
     }
 }
