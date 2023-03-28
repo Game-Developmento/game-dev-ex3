@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Mover : MonoBehaviour
 {
+    public Rigidbody rb;
+
     [SerializeField]
     float speed = 6f;
 
@@ -33,23 +35,24 @@ public class Mover : MonoBehaviour
         moveRight.Disable();
     }
 
-    void start() {
-
-    }
     // Update is called once per frame
     void Update()
     {
         if (moveUp.IsPressed()) {
-            transform.position += new Vector3(0,speed * Time.deltaTime,0);
+            // transform.position += new Vector3(0,speed * Time.deltaTime,0);
+            rb.position += new Vector3(0, speed * Time.deltaTime, 0);
         }
         else if (moveDown.IsPressed()) {
-            transform.position += new Vector3(0,-speed * Time.deltaTime,0);
+            // transform.position += new Vector3(0,-speed * Time.deltaTime,0);
+            rb.position += new Vector3(0, -speed * Time.deltaTime, 0);
         }
         else if (moveRight.IsPressed()) {
-            transform.position += new Vector3(speed * Time.deltaTime,0,0);
+            // transform.position += new Vector3(speed * Time.deltaTime,0,0);
+            rb.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
         else if (moveLeft.IsPressed()) {
-            transform.position += new Vector3(-speed * Time.deltaTime,0,0);
+            // transform.position += new Vector3(-speed * Time.deltaTime,0,0);
+            rb.position += new Vector3(-speed * Time.deltaTime, 0, 0);
         }
     }
 }
