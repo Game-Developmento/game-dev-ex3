@@ -712,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633666622}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Oscillator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1079,7 +1079,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 86
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HeartBeat : MonoBehaviour
 {
-    [SerializeField] public float minScale = 0.5f;
-    [SerializeField] public float maxScale = 2f;
+    [SerializeField] public float minScale = 1f;
+    [SerializeField] public float maxScale = 1.5f;
     [SerializeField] public float beatSpeed = 2f;
 
     private float currentScale;
