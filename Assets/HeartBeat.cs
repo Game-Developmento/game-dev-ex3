@@ -21,8 +21,8 @@ public class HeartBeat : MonoBehaviour
         timer += Time.deltaTime * beatSpeed;
 
         float sin = Mathf.Sin(timer);
-        float lerp = Mathf.Lerp(minScale, maxScale, sin);
-
+        float sinNorm = (sin/2.0f) + 0.5f;
+        float lerp = Mathf.Lerp(minScale, maxScale, sinNorm);
         transform.localScale = Vector3.one * lerp;
     }
 }
